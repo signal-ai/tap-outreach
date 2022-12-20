@@ -231,6 +231,7 @@ def process_records(stream, mdata, max_modified, records, filter_field, fks):
                         #if fk_field_name in record_flat:
                         #    raise Exception(
                         #        '`{}` exists as both an attribute and generated relationship name'.format(fk_field_name))
+                        LOGGER.info('USING FORKED TAP AT github.com/signal-ai/tap-outreach')
 
                         if data_value == None:
                             record_flat[fk_field_name] = None
