@@ -10,6 +10,16 @@ This tap:
 - Outputs the schema for each resource
 - Incrementally pulls data based on the input state
 
+## Fork Status
+This fork currently:
+
+Allows the `relationship` value to take precedence over the `attribute` value by ignoring the exit on the condition the field is also an attribute at (sync.py line 230)
+```python
+if fk_field_name in record_flat:
+    raise Exception(
+        '`{}` exists as both an attribute and generated relationship name'.format(fk_field_name))
+```
+
 
 ## Streams
 
